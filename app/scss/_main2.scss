@@ -1,0 +1,41 @@
+.four-sec {
+	&__wrap {
+		padding: 5rem 0 8.125rem;
+	}
+	&__title {
+		h2 {
+			margin-bottom: 3.125rem;
+		}
+	}
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		color: #fff;
+		text-align: center;
+		&-item {
+			width: 45%;
+			padding: 5rem 6.25rem 5rem;
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+		}
+		&-title {
+			h2 {
+				font-size: 2rem;
+				line-height: 1;
+				margin-bottom: 1.475rem;
+			}
+			h3 {
+				text-transform: uppercase;
+				margin-bottom: 1.475rem;
+			}
+		}
+		&-btn {
+			.btn {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}

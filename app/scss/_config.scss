@@ -1,10 +1,10 @@
 // USER VARIABLES SECTION
 
 $accent: orange; // Accent Color
-$fontsize: 16px; // Body Font Size
+$fontsize: 1vw; // Body Font Size
 $textcolor: #333; // Text Color
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
-$roboto: Roboto, sans-serif; // Roboto Font Family
+$GothamPro: GothamPro, sans-serif; // Roboto Font Family
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 20px;
@@ -12,8 +12,8 @@ $gutter: $grid-gutter-width;
 
 // IMPORT SECTION
 
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
+@import "node_modules/bootstrap/scss/bootstrap-reboot.scss"; // Bootstrap Reboot collection
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss"; // Bootstrap Breakpoints mixin
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'; // Optional Bootstrap Utilites
 
@@ -25,14 +25,17 @@ $gutter: $grid-gutter-width;
 		font-style: $fstyle;
 		font-weight: $fweight;
 		// font-display: swap; // Uncomment to initially display system fonts
-		src: local($fname), url($furl) format('woff2');
+		src: local($fname), url($furl) format("ttf");
 	}
 }
 
-@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2');
-@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2');
-@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2');
-@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2');
+//@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2');
+//@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2');
+//@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2');
+//@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2');
+@include font("YesevaOne", normal, 400, "../fonts/src/YesevaOne-Regular.ttf");
+@include font("GothamPro", normal, 400, "../fonts/src/GothamPro.ttf");
+@include font("GothamPro", normal, bold, "../fonts/src/GothamPro-Bold.ttf");
 
 // GENERAL DOCUMENT STYLES
 
@@ -45,18 +48,92 @@ $gutter: $grid-gutter-width;
 	color: #fff;
 }
 
-input, textarea {
+input,
+textarea {
 	outline: none;
-	&:focus:required:invalid { border-color: red }
-	&:required:valid { border-color: green }
+	&:focus:required:invalid {
+		border-color: red;
+	}
+	&:required:valid {
+		border-color: green;
+	}
+}
+
+ul {
+	padding-left: 0;
+}
+a {
+	color: #000;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+html {
+	font-size: $fontsize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0;
+}
+h2 {
+	font-family: "YesevaOne", serif;
+	font-size: 2.3rem;
 }
 
 body {
-	font-family: $roboto;
+	font-family: $GothamPro;
 	font-size: $fontsize;
-	min-width: 320px;
+	min-width: 20rem;
 	position: relative;
-	line-height: 1.65;
+	line-height: 1.4;
 	overflow-x: hidden;
 	color: $textcolor;
+}
+
+.wrapper-in {
+	position: relative;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.content {
+	overflow: hidden;
+	flex: 1;
+	display: block;
+}
+
+.cus-container {
+	max-width: 85.625rem;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.btn {
+	display: block;
+	text-align: center;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: max-content;
+	margin: 0 auto;
+	p {
+		margin-bottom: 0;
+	}
+}
+.btn-pink {
+	background: #e80072;
+	padding: 1rem 4.375rem;
+}
+.btn-blue {
+	background: #028c9b;
+	padding: 1rem 4.375rem;
 }
