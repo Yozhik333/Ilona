@@ -1,10 +1,11 @@
 .main-header {
-	padding-top: 4.0625em;
-	padding-bottom: 1.875em;
+	padding-top: 3.0625em;
+	padding-bottom: 1.475em;
 }
 .header-nav {
 	nav {
 		margin: 0 auto;
+		padding-left: 2.5rem;
 		ul {
 			display: flex;
 			justify-content: flex-end;
@@ -24,6 +25,9 @@
 				a {
 					color: #787878;
 					transition: 0.3s ease;
+					font-family: "YesevaOne", serif;
+					font-weight: bold;
+					font-size: 1.1rem;
 				}
 				&:hover {
 					a {

@@ -117,7 +117,6 @@ body {
 }
 
 .btn {
-	display: block;
 	text-align: center;
 	color: #fff;
 	display: flex;
@@ -125,8 +124,13 @@ body {
 	justify-content: center;
 	width: max-content;
 	margin: 0 auto;
+	transition: 0.3s ease;
 	p {
 		margin-bottom: 0;
+	}
+	&:hover {
+		text-shadow: 0.0625rem 0.0625rem 0.3125rem #000000;
+		color: #fff;
 	}
 }
 .btn-pink {
@@ -136,4 +140,11 @@ body {
 .btn-blue {
 	background: #028c9b;
 	padding: 1rem 4.375rem;
+}
+
+.btn-opacity {
+	padding: 0.625rem 0.7rem;
+	border: 0.0625rem solid #fff;
+	color: #fff;
+	transition: 0.3s ease;
 }

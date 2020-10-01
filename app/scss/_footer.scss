@@ -1,0 +1,88 @@
+.main-footer {
+	background-color: #008393;
+	padding: 6.875rem 0;
+	&__wrap {
+		display: flex;
+	}
+	.logo {
+		width: 30.625rem;
+	}
+	&__info {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		&-wrap {
+			display: flex;
+		}
+	}
+	&__contacts {
+		h2 {
+			color: #fff;
+			font-size: 1.5rem;
+		}
+		p {
+			color: #fff;
+			font-size: 1.5rem;
+			font-family: "YesevaOne", serif;
+			margin-bottom: 0;
+		}
+		a {
+			color: #fff;
+			font-size: 1.5rem;
+			font-family: "YesevaOne", serif;
+			transition: 0.3s ease;
+			&:hover {
+				color: #cd2879;
+			}
+		}
+	}
+	&__social {
+		padding-left: 5rem;
+		a {
+			display: block;
+			width: 1.5625rem;
+			height: 1.5625rem;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+			&:not(:last-child) {
+				margin-bottom: 0.625rem;
+			}
+		}
+	}
+	&__mail {
+		p {
+			color: #fff;
+			font-size: 1.3rem;
+			font-family: "YesevaOne", serif;
+		}
+	}
+	&__input {
+		display: flex;
+		input {
+			background: #008393;
+			outline: none;
+			border: 0.0625rem solid #fff;
+			padding: 0.425rem 0.625rem;
+			color: #fff;
+			width: 16rem;
+			&::placeholder {
+				color: #fff;
+			}
+		}
+		a {
+			background-color: #fff;
+			color: #616161;
+			border: 0.0625rem solid #fff;
+			font-family: "YesevaOne", serif;
+			padding: 0.4375rem 0.9375rem 0.5625rem;
+			transition: 0.3s ease;
+			font-weight: bold;
+			&:hover {
+				background-color: #008393;
+				color: #fff;
+			}
+		}
+	}
+}
