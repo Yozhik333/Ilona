@@ -74,6 +74,7 @@
 .second-sec {
 	&__wrap {
 		display: flex;
+		padding: 6rem 0;
 	}
 	&__text {
 		h2 {
@@ -95,6 +96,7 @@
 		position: relative;
 		img {
 			width: 100%;
+			height: 100%;
 		}
 	}
 }
@@ -123,8 +125,7 @@
 		position: relative;
 		margin: 0 auto;
 		img {
-			position: absolute;
-			width: 20rem;
+			width: 100%;
 		}
 	}
 	&-text {
